@@ -28,7 +28,7 @@ pageextension 50250 "PEBK_purchaseOrderEXT" extends "Purchase Order"
                 begin
                     if Rec."No." <> '' then begin
                         if purchaseHeader.Get(Rec."Document Type", Rec."No.") then
-                            eventPublisher.RaiseEvent(PurchaseHeader)
+                            eventPublisher.RaiseEvent(purchaseHeader)
                         else
                             Message('Purchase Header not found.');
                     end
