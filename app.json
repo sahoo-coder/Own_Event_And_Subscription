@@ -1,0 +1,39 @@
+{
+  "id": "d4a56679-d75b-4fb8-999d-0201be0887dd",
+  "name": "Work8(28-02-2025)",
+  "publisher": "AGT_KIRTISUNDAR",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [
+    {
+      "id": "dc01f1de-dc68-43af-bf8e-0c3994bf0268",
+      "name": "ALtask28febtask",
+      "publisher": "AGT_RP",
+      "version": "1.0.0.0"
+    }
+  ],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "24.0.0.0",
+  "idRanges": [
+    {
+      "from": 50100,
+      "to": 59999
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": true,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "13.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}
