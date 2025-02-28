@@ -23,10 +23,15 @@ pageextension 50250 "PEBK_purchaseOrderEXT" extends "Purchase Order"
                 ApplicationArea = All;
                 trigger OnAction()
                 var
-                    eventSUB: Codeunit codeunit_PurchaseHeader;
+                    eventPublisher: Codeunit PurchaseHeaderEventPublisher;
+                    purchaseHeader: Record "Purchase Header";
                 begin
-                    eventSUB.Run();
-                    CurrPage.Update();
+                    if Rec."No." <> '' then begin
+                        if purchaseHeader.Get(Rec."Document Type", Rec."No.") then
+                            eventPublisher.RaiseEvent(PurchaseHeader)
+                        else
+                            Message('Purchase Header not found.');
+                    end
                 end;
             }
         }
